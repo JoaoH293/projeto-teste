@@ -1,0 +1,202 @@
+/* base.css — reset, tipografia, foco e utilidades. Depende de tokens.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: var(--txt-base);
+  font-weight: var(--peso-normal);
+  line-height: var(--altura-linha-texto);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fonte-display);
+  font-weight: var(--peso-semi);
+  line-height: var(--altura-linha-titulo);
+  letter-spacing: var(--espaco-letra-titulo);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--txt-3xl); line-height: var(--altura-linha-apertada); }
+h2 { font-size: var(--txt-xl); }
+h3 { font-size: var(--txt-lg); }
+h4 { font-size: var(--txt-md); }
+
+p, li { text-wrap: pretty; }
+
+a {
+  color: var(--cor-primaria);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover { color: var(--cor-primaria-hover); }
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+img { height: auto; background-color: var(--cor-primaria-clara); }
+
+svg { fill: currentColor; }
+
+/* Tamanho padrão dos ícones injetados por data-icon. Sem isto, um <svg> sem
+   width/height assume 100% da largura do contêiner. As regras mais específicas
+   de components.css e sections.css continuam vencendo por virem depois. */
+[data-icon] { display: inline-flex; align-items: center; }
+[data-icon] > svg { width: 1.15em; height: 1.15em; flex: none; }
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button { cursor: pointer; }
+
+/* Todos os alvos de toque com no mínimo 44x44. */
+a, button, [role="button"], summary, label[for], input[type="checkbox"] {
+  touch-action: manipulation;
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+::selection {
+  background-color: var(--cor-primaria);
+  color: #fff;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--borda);
+}
+
+/* Utilidades ------------------------------------------------------------ */
+
+.container {
+  width: 100%;
+  max-width: var(--largura-container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--estreito { max-width: 820px; }
+
+.visualmente-oculto {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pular-para-conteudo {
+  position: absolute;
+  top: var(--e-3);
+  left: var(--e-3);
+  z-index: var(--z-aviso);
+  padding: var(--e-3) var(--e-5);
+  background-color: var(--cor-primaria);
+  color: #fff;
+  border-radius: var(--r-sm);
+  font-weight: var(--peso-semi);
+  text-decoration: none;
+  transform: translateY(-150%);
+  transition: transform var(--dur-media) var(--curva);
+}
+
+.pular-para-conteudo:focus { transform: translateY(0); color: #fff; }
+
+.secao { padding-block: var(--e-10); }
+.secao--alt { background-color: var(--bg-alt); }
+.secao--compacta { padding-block: var(--e-9); }
+
+.olho {
+  display: block;
+  font-family: var(--fonte-texto);
+  font-size: var(--txt-xs);
+  font-weight: var(--peso-forte);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cor-terracota);
+  margin-bottom: var(--e-4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .olho { color: var(--cor-acento); }
+}
+
+:root[data-tema="escuro"] .olho { color: var(--cor-acento); }
+
+.cabecalho-secao { max-width: 68ch; margin-bottom: var(--e-8); }
+.cabecalho-secao--centrado { margin-inline: auto; text-align: center; }
+.cabecalho-secao p {
+  font-size: var(--txt-md);
+  color: var(--texto-suave);
+  margin-top: var(--e-4);
+}
+
+[hidden] { display: none !important; }
+
+/* Utilitários de composição. Substituem atributos style= soltos no HTML, que
+   seriam bloqueados por uma Content-Security-Policy restritiva. */
+.pilha-4 { gap: var(--e-4); }
+.pilha-5 { gap: var(--e-5); }
+
+.mt-3 { margin-top: var(--e-3); }
+.mt-4 { margin-top: var(--e-4); }
+.mt-6 { margin-top: var(--e-6); }
+.mt-7 { margin-top: var(--e-7); }
+.mt-9 { margin-top: var(--e-9); }
+
+.txt-xs { font-size: var(--txt-xs); }
+.txt-sm { font-size: var(--txt-sm); }
+.txt-md { font-size: var(--txt-md); }
+.txt-sm-suave { font-size: var(--txt-sm); color: var(--texto-suave); }
+
+.legenda { font-size: var(--txt-xs); color: var(--texto-suave); }
+.nota { font-size: var(--txt-xs); color: var(--texto-suave); }
+.nota--centro { text-align: center; }
+
+.raio-md { border-radius: var(--r-md); }
+.alinhar-topo { align-items: start; }
+.largura-leitura { max-width: 760px; }
+
+.titulo-pagina { font-size: var(--txt-2xl); }
+
+.rodape-descricao {
+  font-size: var(--txt-sm);
+  color: var(--texto-suave);
+  margin-top: var(--e-3);
+  max-width: 44ch;
+}
+
+/* Metadados de cartão sem a linha superior. */
+.sem-borda-topo { border-top: 0; padding-top: 0; }

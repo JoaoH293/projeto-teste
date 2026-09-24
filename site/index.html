@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etec Eng. Agrônomo Narciso de Medeiros — Iguape/SP | Ensino técnico público</title>
+<meta name="description" content="Escola técnica pública em Iguape, no Vale do Ribeira. Cursos técnicos presenciais de Agropecuária, Administração e Informática, gratuitos, pelo Centro Paula Souza. Fundada em 1970.">
+<meta name="theme-color" content="#226b3f">
+<link rel="canonical" href="https://eteciguape.cps.sp.gov.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Etec Eng. Agrônomo Narciso de Medeiros — Iguape/SP">
+<meta property="og:description" content="Ensino técnico público e gratuito no Vale do Ribeira. Agropecuária, Administração e Informática.">
+<meta property="og:image" content="assets/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/logo-etec.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+<a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- NAVBAR -->
+<header class="navbar" data-navbar>
+  <div class="container navbar__interno">
+    <a class="navbar__marca" href="index.html">
+      <img src="assets/img/logo-etec.svg" width="36" height="36" alt="">
+      <span class="navbar__marca-texto">
+        <span class="navbar__marca-nome">Etec Narciso de Medeiros</span>
+        <span class="navbar__marca-sub">Iguape · Centro Paula Souza</span>
+      </span>
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <ul class="navbar__lista">
+        <li><a class="navbar__link" href="#sobre">A Escola</a></li>
+        <li><a class="navbar__link" href="#cursos">Cursos</a></li>
+        <li><a class="navbar__link" href="#estrutura">Estrutura</a></li>
+        <li><a class="navbar__link" href="#coop-escola">Coop-Escola</a></li>
+        <li><a class="navbar__link" href="#vestibulinho">Vestibulinho</a></li>
+        <li><a class="navbar__link" href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__acoes">
+      <a class="botao botao--primario botao--pequeno" href="#vestibulinho">
+        Inscreva-se
+        <span data-icon="seta-direita"></span>
+      </a>
+      <button class="navbar__botao navbar__botao--menu" type="button"
+              data-abrir-menu aria-expanded="false" aria-controls="menu-movel">
+        <span data-icon="menu"></span>
+        <span class="visualmente-oculto">Abrir menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MENU MÓVEL -->
+<div class="menu-movel" id="menu-movel" data-menu-movel hidden>
+  <div class="container menu-movel__topo">
+    <span class="navbar__marca-nome">Menu</span>
+    <button class="navbar__botao" type="button" data-fechar-menu>
+      <span data-icon="fechar"></span>
+      <span class="visualmente-oculto">Fechar menu</span>
+    </button>
+  </div>
+  <div class="container">
+    <ul class="menu-movel__lista">
+      <li><a class="menu-movel__link" href="#sobre">A Escola</a></li>
+      <li><a class="menu-movel__link" href="#cursos">Cursos</a></li>
+      <li><a class="menu-movel__link" href="#estrutura">Estrutura</a></li>
+      <li><a class="menu-movel__link" href="#coop-escola">Coop-Escola</a></li>
+      <li><a class="menu-movel__link" href="#vestibulinho">Vestibulinho</a></li>
+      <li><a class="menu-movel__link" href="#faq">Perguntas frequentes</a></li>
+      <li><a class="menu-movel__link" href="#localizacao">Localização</a></li>
+      <li><a class="menu-movel__link" href="cursos.html">Todos os cursos</a></li>
+      <li><a class="menu-movel__link" href="contato.html">Contato</a></li>
+    </ul>
+    <a class="botao botao--primario botao--largo menu-movel__cta" href="#vestibulinho">
+      Inscreva-se no Vestibulinho
+    </a>
+  </div>
+</div>
+
+<main id="conteudo">
+
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-labelledby="hero-titulo">
+    <picture>
+      <source type="image/avif" srcset="assets/img/hero.avif">
+      <source type="image/webp" srcset="assets/img/hero.webp">
+      <img class="hero__fundo" src="assets/img/hero.jpg" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
+    </picture>
+
+    <div class="container hero__conteudo">
+      <p class="hero__selo">
+        <span data-icon="medalha"></span>
+        Escola técnica pública e gratuita · Centro Paula Souza
+      </p>
+
+      <h1 id="hero-titulo">Uma escola que nasceu da terra e do rio</h1>
+
+      <p class="hero__resumo">
+        Desde 1970 formamos técnicos em Iguape, no coração do Vale do Ribeira.
+        Ensino presencial, gratuito e ligado ao trabalho real da região.
+      </p>
+
+      <div class="grupo-botoes">
+        <a class="botao botao--acento" href="#vestibulinho">
+          Inscreva-se no Vestibulinho
+          <span data-icon="seta-direita"></span>
+        </a>
+        <a class="botao botao--contorno-claro" href="#cursos">Conhecer os cursos</a>
+      </div>
+
+      <p class="hero__rodape">
+        <span><span data-icon="local"></span> Rod. Pref. Casimiro Teixeira, km 51,5 — Três Barras, Iguape/SP</span>
+        <span><span data-icon="relogio"></span> Segunda a sexta, 7h às 21h</span>
+      </p>
+    </div>
+
+    <a class="hero__rolar" href="#credibilidade" aria-label="Ver mais">
+      <span data-icon="seta-baixo"></span>
+    </a>
+  </section>
+
+  <!-- CREDIBILIDADE -->
+  <section class="secao secao--compacta secao--alt" id="credibilidade" aria-labelledby="cred-titulo">
+    <div class="container">
+      <h2 class="visualmente-oculto" id="cred-titulo">Por que estudar aqui</h2>
+      <div class="grade-4">
+        <div class="cartao" data-revelar data-atraso="1">
+          <div class="cartao__icone"><span data-icon="predio"></span></div>
+          <h3>Escola pública e gratuita</h3>
+          <p>Sem mensalidade e sem taxa de matrícula. A Etec integra o Centro Paula Souza, rede estadual de ensino técnico.</p>
+        </div>
+        <div class="cartao" data-revelar data-atraso="2">
+          <div class="cartao__icone"><span data-icon="medalha"></span></div>
+          <h3>Mais de 50 anos de história</h3>
+          <p>Fundada em 1970 como Colégio Técnico Agrícola, acompanha a vocação agrícola e pesqueira do Vale do Ribeira.</p>
+        </div>
+        <div class="cartao" data-revelar data-atraso="3">
+          <div class="cartao__icone"><span data-icon="laboratorio"></span></div>
+          <h3>Aprender fazendo</h3>
+          <p>Formação técnica com prática: campo, laboratórios, empresas parceiras e a cooperativa-escola da própria unidade.</p>
+        </div>
+        <div class="cartao" data-revelar data-atraso="4">
+          <div class="cartao__icone"><span data-icon="pessoas"></span></div>
+          <h3>Perto de casa</h3>
+          <p>Quem mora em Iguape e no entorno estuda sem sair da região, com o custo de vida de uma cidade do interior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="secao" id="sobre" aria-labelledby="sobre-titulo">
+    <div class="container">
+      <div class="dividido">
+        <div class="empilhado" data-revelar>
+          <p class="olho">A Escola</p>
+          <h2 id="sobre-titulo">Do Colégio Técnico Agrícola ao Centro Paula Souza</h2>
+          <p>
+            A Etec Eng. Agrônomo Narciso de Medeiros nasceu em <strong>1970</strong>, como
+            Colégio Técnico Agrícola. Em <strong>1994</strong> passou a integrar o
+            Centro Paula Souza, a autarquia estadual que hoje reúne 229 Etecs e
+            90 Fatecs em São Paulo.
+          </p>
+          <p>
+            O nome homenageia o engenheiro agrônomo Narciso de Medeiros
+            (nascido em Iguape em 1892), formado pela ESALQ/USP em 1914. Em 1931
+            ele instalou o Campo Experimental da Cultura da Banana em Miracatu e
+            publicou, em 1937, o estudo <em>A cultura da bananeira</em> — trabalho
+            que ajudou a firmar a bananicultura no litoral paulista.
+          </p>
+          <p>
+            É uma coincidência que diz muito sobre esta escola: a mesma década
+            em que o patrono pesquisava a banana no Vale do Ribeira é a década em
+            que a atividade se espalhou pela região que a Etec atende até hoje.
+          </p>
+        </div>
+
+        <figure class="empilhado" data-revelar data-atraso="2">
+          <picture>
+            <source type="image/avif" srcset="assets/img/bananal-historico-400.avif 400w, assets/img/bananal-historico-800.avif 800w, assets/img/bananal-historico-1200.avif 1200w" sizes="(min-width: 900px) 520px, 92vw">
+            <source type="image/webp" srcset="assets/img/bananal-historico-400.webp 400w, assets/img/bananal-historico-800.webp 800w, assets/img/bananal-historico-1200.webp 1200w" sizes="(min-width: 900px) 520px, 92vw">
+            <img class="raio-md" src="assets/img/bananal-historico-fallback.jpg" alt="Registro histórico de uma plantação de bananeiras, em preto e branco e sépia." width="1200" height="588" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="legenda">
+            Cultura da bananeira — registro histórico. Acervo do Museu Paulista.
+            Imagem de arquivo, não retrata a escola.
+          </figcaption>
+        </figure>
+      </div>
+
+      <ol class="linha-tempo mt-9 largura-leitura">
+        <li class="linha-tempo__item" data-revelar>
+          <span class="linha-tempo__ano">1970</span>
+          <p>Fundação como Colégio Técnico Agrícola, com as primeiras turmas em 1971.</p>
+        </li>
+        <li class="linha-tempo__item" data-revelar data-atraso="1">
+          <span class="linha-tempo__ano">1993–1994</span>
+          <p>Incorporada ao Centro Paula Souza pelo Decreto 37.735/1993 e renomeada em 31/10/1994, pelo Decreto 38.703.</p>
+        </li>
+        <li class="linha-tempo__item" data-revelar data-atraso="2">
+          <span class="linha-tempo__ano">2004</span>
+          <p>Constituição da Cooperativa-Escola COOPERAGRI, em 10 de março.</p>
+        </li>
+        <li class="linha-tempo__item" data-revelar data-atraso="3">
+          <span class="linha-tempo__ano">Hoje</span>
+          <p>Três cursos técnicos presenciais gratuitos, com 40 vagas cada, e cursos a distância pela rede Etec.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="secao secao--compacta secao--alt" id="numeros" aria-labelledby="numeros-titulo">
+    <div class="container">
+      <h2 class="cabecalho-secao cabecalho-secao--centrado" id="numeros-titulo">A escola em números</h2>
+      <div class="numeros">
+        <div class="numero" data-revelar>
+          <span class="numero__valor" data-contador="1970" data-formato="milhar">1.970</span>
+          <span class="numero__rotulo">Ano de fundação, como Colégio Técnico Agrícola</span>
+        </div>
+        <div class="numero" data-revelar data-atraso="1">
+          <span class="numero__valor" data-contador="1994" data-formato="milhar">1.994</span>
+          <span class="numero__rotulo">Integração ao Centro Paula Souza</span>
+        </div>
+        <div class="numero" data-revelar data-atraso="2">
+          <span class="numero__valor" data-contador="3">3</span>
+          <span class="numero__rotulo">Cursos técnicos presenciais no Vestibulinho vigente</span>
+        </div>
+        <div class="numero" data-revelar data-atraso="3">
+          <span class="numero__valor" data-contador="120">120</span>
+          <span class="numero__rotulo">Vagas anuais nos cursos presenciais (3 turmas de 40)</span>
+        </div>
+      </div>
+      <p class="nota nota--centro mt-6">
+        Fontes: Centro Paula Souza e Vestibulinho das Etecs.
+      </p>
+    </div>
+  </section>
+
+  <!-- CURSOS -->
+  <section class="secao" id="cursos" aria-labelledby="cursos-titulo">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <p class="olho">Cursos</p>
+        <h2 id="cursos-titulo">Três formações técnicas, presenciais e gratuitas</h2>
+        <p>
+          Todos os cursos abaixo são técnicos de nível médio, oferecidos
+          presencialmente nesta unidade. A seleção é feita pelo Vestibulinho
+          das Etecs, com 40 vagas por turma.
+        </p>
+      </div>
+
+      <div class="grade-3">
+        <article class="cartao cartao--interativo" data-revelar data-atraso="1">
+          <div class="curso__topo">
+            <div class="cartao__icone"><span data-icon="broto"></span></div>
+            <h3>Agropecuária</h3>
+          </div>
+          <p>
+            Formação para atuar na produção animal e vegetal, no manejo do solo,
+            na mecanização e na gestão de propriedades rurais — o eixo mais
+            antigo desta escola, ligado à vocação agrícola do Vale do Ribeira.
+          </p>
+          <ul class="cartao__lista">
+            <li><span data-icon="check"></span> Técnico em Agropecuária, integrado ao ensino médio</li>
+            <li><span data-icon="check"></span> Período integral: manhã e tarde</li>
+            <li><span data-icon="check"></span> 40 vagas por ano</li>
+          </ul>
+          <div class="cartao__meta">
+            <span class="etiqueta"><span data-icon="relogio"></span> Integral</span>
+            <span class="etiqueta etiqueta--neutra">40 vagas</span>
+          </div>
+        </article>
+
+        <article class="cartao cartao--interativo" data-revelar data-atraso="2">
+          <div class="curso__topo">
+            <div class="cartao__icone"><span data-icon="gestao"></span></div>
+            <h3>Administração</h3>
+          </div>
+          <p>
+            Formação em rotinas administrativas, finanças, recursos humanos,
+            logística e empreendedorismo. Serve tanto para o comércio e os
+            serviços de Iguape quanto para a gestão de negócios rurais e do
+            turismo regional.
+          </p>
+          <ul class="cartao__lista">
+            <li><span data-icon="check"></span> Técnico em Administração</li>
+            <li><span data-icon="check"></span> Período noturno, para quem já trabalha</li>
+            <li><span data-icon="check"></span> 40 vagas por ano</li>
+          </ul>
+          <div class="cartao__meta">
+            <span class="etiqueta"><span data-icon="relogio"></span> Noturno</span>
+            <span class="etiqueta etiqueta--neutra">40 vagas</span>
+          </div>
+        </article>
+
+        <article class="cartao cartao--interativo" data-revelar data-atraso="3">
+          <div class="curso__topo">
+            <div class="cartao__icone"><span data-icon="computador"></span></div>
+            <h3>Informática</h3>
+          </div>
+          <p>
+            Formação para desenvolver sistemas, administrar redes e bancos de
+            dados, dar suporte a usuários e aplicar tecnologia em organizações —
+            uma das áreas com mais demanda por profissionais na região.
+          </p>
+          <ul class="cartao__lista">
+            <li><span data-icon="check"></span> Técnico em Informática, integrado ao ensino médio</li>
+            <li><span data-icon="check"></span> Período da manhã</li>
+            <li><span data-icon="check"></span> 40 vagas por ano</li>
+          </ul>
+          <div class="cartao__meta">
+            <span class="etiqueta"><span data-icon="relogio"></span> Manhã</span>
+            <span class="etiqueta etiqueta--neutra">40 vagas</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="aviso aviso--atencao mt-7" data-revelar>
+        <span data-icon="alerta"></span>
+        <div>
+          <p><strong>Cursos a distância.</strong> A unidade também participa da oferta
+          EAD da rede Etec em Administração, Guia de Turismo e Secretariado. A
+          quantidade de vagas para essas modalidades não é divulgada na mesma
+          página do Vestibulinho presencial — confirme na secretaria.</p>
+        </div>
+      </div>
+
+      <div class="grupo-botoes mt-7">
+        <a class="botao botao--secundario" href="cursos.html">
+          Detalhes de cada curso
+          <span data-icon="seta-direita"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTRUTURA -->
+  <section class="secao secao--alt" id="estrutura" aria-labelledby="estrutura-titulo">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <p class="olho">Estrutura</p>
+        <h2 id="estrutura-titulo">Onde a teoria vira prática</h2>
+        <p>
+          Uma escola técnica agrícola se aprende no campo tanto quanto na sala
+          de aula. Estes são os espaços que sustentam a formação.
+        </p>
+      </div>
+
+      <div class="grade-3">
+        <div class="cartao" data-revelar>
+          <div class="cartao__icone"><span data-icon="folha"></span></div>
+          <h3>Área de produção</h3>
+          <p>Cultivos, horta e canteiros usados nas aulas práticas de fitotecnia, solos e manejo.</p>
+        </div>
+        <div class="cartao" data-revelar data-atraso="1">
+          <div class="cartao__icone"><span data-icon="pecuaria"></span></div>
+          <h3>Criação animal</h3>
+          <p>Instalações para pequenos animais e aves, base das aulas de zootecnia e produção animal.</p>
+        </div>
+        <div class="cartao" data-revelar data-atraso="2">
+          <div class="cartao__icone"><span data-icon="laboratorio"></span></div>
+          <h3>Laboratórios</h3>
+          <p>Espaços de solos, análises e informática para as aulas técnicas e os trabalhos de conclusão.</p>
+        </div>
+        <div class="cartao" data-revelar data-atraso="3">
+          <div class="cartao__icone"><span data-icon="livro"></span></div>
+          <h3>Salas e biblioteca</h3>
+          <p>Salas de aula, ambiente de estudo e acervo de apoio aos cursos técnicos.</p>
+        </div>
+        <div class="cartao" data-revelar data-atraso="4">
+          <div class="cartao__icone"><span data-icon="agua"></span></div>
+          <h3>Recursos hídricos</h3>
+          <p>O rio e o manguezal do entorno como laboratório vivo para as discussões ambientais da região.</p>
+        </div>
+        <div class="cartao" data-revelar data-atraso="5">
+          <div class="cartao__icone"><span data-icon="mapa"></span></div>
+          <h3>Cooperativa-escola</h3>
+          <p>Espaço da COOPERAGRI, onde a produção das aulas práticas vira gestão de verdade.</p>
+        </div>
+      </div>
+
+      <p class="nota mt-6">
+        A escola não divulga fotos próprias de suas instalações neste site. Use os
+        canais oficiais de contato para agendar uma visita.
+      </p>
+    </div>
+  </section>
+
+  <!-- METODOLOGIA -->
+  <section class="secao" id="metodologia" aria-labelledby="metodologia-titulo">
+    <div class="container">
+      <div class="dividido">
+        <div class="empilhado" data-revelar>
+          <p class="olho">Metodologia</p>
+          <h2 id="metodologia-titulo">Competência se constrói com a mão na massa</h2>
+          <p>
+            O ensino técnico do Centro Paula Souza parte de situações reais de
+            trabalho. Na prática, isso significa menos aula expositiva e mais
+            projeto, medição, erro e correção — do canteiro ao sistema.
+          </p>
+        </div>
+
+        <div class="empilhado" data-revelar data-atraso="1">
+          <div class="cartao">
+            <div class="cartao__icone"><span data-icon="alvo"></span></div>
+            <h3>Aulas práticas no centro</h3>
+            <p>Os conteúdos técnicos são ancorados em atividades de campo e laboratório, e não apenas em prova.</p>
+          </div>
+          <div class="cartao">
+            <div class="cartao__icone"><span data-icon="documento"></span></div>
+            <h3>Projetos integradores</h3>
+            <p>Trabalhos que juntam disciplinas e terminam em algo entregável: um cultivo, um sistema, um plano.</p>
+          </div>
+          <div class="cartao">
+            <div class="cartao__icone"><span data-icon="pessoas"></span></div>
+            <h3>Estágio e parcerias</h3>
+            <p>Aproximação com propriedades, empresas e instituições da região para vivência profissional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COOP-ESCOLA -->
+  <section class="secao secao--alt" id="coop-escola" aria-labelledby="coop-titulo">
+    <div class="container">
+      <div class="dividido dividido--invertido">
+        <div class="empilhado" data-revelar>
+          <p class="olho">Coop-Escola</p>
+          <h2 id="coop-titulo">COOPERAGRI: a cooperativa que os alunos administram</h2>
+          <p>
+            Constituída em <strong>10 de março de 2004</strong>, a Cooperativa-Escola
+            Agropecuária de Iguape é o elo entre a sala de aula e o mercado.
+            Nela, o que os alunos produzem nas aulas práticas é comercializado
+            com gestão de verdade: contabilidade, assembleia, prestação de
+            contas e decisão coletiva.
+          </p>
+          <p>
+            É raro numa escola técnica e é o tipo de experiência que não se
+            aprende em apostila. Está registrada sob NIRE 35400076224 e
+            CNPJ 06.272.302/0001-03.
+          </p>
+          <dl class="empilhado pilha-4">
+            <div class="dado">
+              <span data-icon="calendario"></span>
+              <div><dt>Constituição</dt><dd>10 de março de 2004</dd></div>
+            </div>
+            <div class="dado">
+              <span data-icon="documento"></span>
+              <div><dt>CNPJ</dt><dd>06.272.302/0001-03</dd></div>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="empilhado" data-revelar data-atraso="2">
+          <picture>
+            <source type="image/avif" srcset="assets/img/bananal-400.avif 400w, assets/img/bananal-800.avif 800w" sizes="(min-width: 900px) 520px, 92vw">
+            <source type="image/webp" srcset="assets/img/bananal-400.webp 400w, assets/img/bananal-800.webp 800w" sizes="(min-width: 900px) 520px, 92vw">
+            <img class="raio-md" src="assets/img/bananal-fallback.jpg" alt="Fileiras de bananeiras em uma plantação." width="800" height="533" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="legenda">
+            Bananicultura, principal atividade agrícola regional. Imagem
+            ilustrativa do Vale do Ribeira — não é uma foto da escola.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VESTIBULINHO -->
+  <section class="secao" id="vestibulinho" aria-labelledby="vestibulinho-titulo">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <p class="olho">Vestibulinho</p>
+        <h2 id="vestibulinho-titulo">Como entrar na Etec</h2>
+        <p>
+          A seleção para os cursos técnicos das Etecs é feita por um processo
+          seletivo único, o Vestibulinho. A inscrição é feita exclusivamente
+          pelo site oficial, e o próprio candidato escolhe o curso e a unidade.
+        </p>
+      </div>
+
+      <div class="grade-2">
+        <div class="cartao cartao--destaque" data-revelar>
+          <div class="cartao__icone"><span data-icon="calendario"></span></div>
+          <h3>Calendário — 1º semestre de 2027</h3>
+          <ul class="cartao__lista">
+            <li><span data-icon="check-circulo"></span> Pedido de redução da taxa: 17/08 a 01/09/2026</li>
+            <li><span data-icon="check-circulo"></span> Inscrições: 02/09 a 03/11/2026</li>
+            <li><span data-icon="check-circulo"></span> Atendimento diferenciado (PcD): 02/09 a 30/09/2026</li>
+            <li><span data-icon="check-circulo"></span> Prova: <strong>06/12/2026</strong></li>
+            <li><span data-icon="check-circulo"></span> Classificação e 1ª chamada: 11/01/2027</li>
+          </ul>
+        </div>
+
+        <div class="empilhado">
+          <div class="cartao" data-revelar data-atraso="1">
+            <div class="cartao__icone"><span data-icon="documento"></span></div>
+            <h3>Taxa e isenção</h3>
+            <p>A taxa de inscrição é de <strong>R$ 50,00</strong>. Há redução para
+            <strong>R$ 25,00</strong> para quem tem renda familiar inferior a dois
+            salários mínimos ou está desempregado, mediante pedido no prazo do
+            calendário.</p>
+          </div>
+          <div class="cartao" data-revelar data-atraso="2">
+            <div class="cartao__icone"><span data-icon="externo"></span></div>
+            <h3>Inscrição e dúvidas</h3>
+            <p>As inscrições são feitas apenas em <strong>vestibulinho.etec.sp.gov.br</strong>.
+            O atendimento oficial é pelos telefones (11) 3471-4071 e 0800 772 2829,
+            em dias úteis, das 8h às 20h.</p>
+            <div class="grupo-botoes mt-3">
+              <a class="botao botao--primario botao--pequeno" href="https://vestibulinho.etec.sp.gov.br" target="_blank" rel="noopener">
+                Site do Vestibulinho
+                <span data-icon="externo"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aviso mt-6" data-revelar>
+        <span data-icon="alerta"></span>
+        <div>
+          <p>Existem também as <strong>Vagas Remanescentes</strong>, para quem perdeu
+          o prazo do Vestibulinho ou quer transferência. As regras e os prazos
+          mudam a cada semestre — confirme na secretaria antes de contar com elas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="secao secao--alt" id="faq" aria-labelledby="faq-titulo">
+    <div class="container container--estreito">
+      <div class="cabecalho-secao cabecalho-secao--centrado">
+        <p class="olho">Dúvidas frequentes</p>
+        <h2 id="faq-titulo">Perguntas frequentes</h2>
+      </div>
+
+      <div class="acordeao" data-acordeao>
+        <div class="acordeao__item" data-acordeao-item>
+          <h3>
+            <button class="acordeao__gatilho" type="button" data-acordeao-gatilho aria-expanded="true">
+              Estudar na Etec é pago?
+              <span data-icon="chevron-baixo"></span>
+            </button>
+          </h3>
+          <div class="acordeao__painel" data-acordeao-painel>
+            <p>Não. As Etecs são escolas públicas estaduais, ligadas ao Centro Paula
+            Souza. O curso é gratuito, sem mensalidade nem taxa de matrícula. A
+            única cobrança é a taxa de inscrição do Vestibulinho, que tem redução
+            para quem se enquadra.</p>
+          </div>
+        </div>
+
+        <div class="acordeao__item" data-acordeao-item>
+          <h3>
+            <button class="acordeao__gatilho" type="button" data-acordeao-gatilho aria-expanded="true">
+              Preciso ter terminado o ensino médio?
+              <span data-icon="chevron-baixo"></span>
+            </button>
+          </h3>
+          <div class="acordeao__painel" data-acordeao-painel>
+            <p>Não para os cursos técnicos integrados: nesse formato, o aluno faz o
+            ensino médio e o curso técnico juntos, na mesma escola. A Etec de
+            Iguape oferece os cursos de Agropecuária e Informática nessa
+            modalidade, em período integral e no período da manhã,
+            respectivamente.</p>
+          </div>
+        </div>
+
+        <div class="acordeao__item" data-acordeao-item>
+          <h3>
+            <button class="acordeao__gatilho" type="button" data-acordeao-gatilho aria-expanded="true">
+              Dá para trabalhar e estudar ao mesmo tempo?
+              <span data-icon="chevron-baixo"></span>
+            </button>
+          </h3>
+          <div class="acordeao__painel" data-acordeao-painel>
+            <p>Sim. O curso técnico em Administração é oferecido no período noturno
+            justamente por isso — é a opção de quem já trabalha durante o dia.</p>
+          </div>
+        </div>
+
+        <div class="acordeao__item" data-acordeao-item>
+          <h3>
+            <button class="acordeao__gatilho" type="button" data-acordeao-gatilho aria-expanded="true">
+              Onde faço a inscrição?
+              <span data-icon="chevron-baixo"></span>
+            </button>
+          </h3>
+          <div class="acordeao__painel" data-acordeao-painel>
+            <p>Somente pelo site oficial do Vestibulinho das Etecs,
+            vestibulinho.etec.sp.gov.br. A Etec não recebe inscrições
+            presencialmente nem por e-mail. Desconfie de qualquer site que cobre
+            para "garantir" sua vaga.</p>
+          </div>
+        </div>
+
+        <div class="acordeao__item" data-acordeao-item>
+          <h3>
+            <button class="acordeao__gatilho" type="button" data-acordeao-gatilho aria-expanded="true">
+              Como funciona o curso de Agropecuária?
+              <span data-icon="chevron-baixo"></span>
+            </button>
+          </h3>
+          <div class="acordeao__painel" data-acordeao-painel>
+            <p>É um curso técnico integrado ao ensino médio, em período integral
+            (manhã e tarde), com 40 vagas por ano. A formação cobre produção
+            animal e vegetal, solos, mecanização e gestão rural, com forte
+            componente de aulas práticas na área de produção da escola.</p>
+          </div>
+        </div>
+
+        <div class="acordeao__item" data-acordeao-item>
+          <h3>
+            <button class="acordeao__gatilho" type="button" data-acordeao-gatilho aria-expanded="true">
+              A escola fica onde, exatamente?
+              <span data-icon="chevron-baixo"></span>
+            </button>
+          </h3>
+          <div class="acordeao__painel" data-acordeao-painel>
+            <p>Na Rodovia Prefeito Casimiro Teixeira, km 51,5, bairro Três Barras,
+            em Iguape/SP, CEP 11920-970. O atendimento funciona de segunda a
+            sexta, das 7h às 21h.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="secao" id="localizacao" aria-labelledby="localizacao-titulo">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <p class="olho">Localização</p>
+        <h2 id="localizacao-titulo">Onde nos encontrar</h2>
+        <p>
+          Iguape fica no litoral sul de São Paulo, a cerca de 202 km da capital,
+          na foz do Ribeira de Iguape. A escola está na altura do km 51,5 da
+          Rodovia Prefeito Casimiro Teixeira, no bairro Três Barras.
+        </p>
+      </div>
+
+      <div class="dividido alinhar-topo">
+        <dl class="empilhado pilha-5" data-revelar>
+          <div class="dado">
+            <span data-icon="local"></span>
+            <div>
+              <dt>Endereço</dt>
+              <dd>Rodovia Prefeito Casimiro Teixeira, km 51,5<br>Caixa Postal 59 — Três Barras<br>Iguape/SP — CEP 11920-970</dd>
+            </div>
+          </div>
+          <div class="dado">
+            <span data-icon="telefone"></span>
+            <div>
+              <dt>Telefones</dt>
+              <dd><a href="tel:+551338415170">(13) 3841-5170</a><br><a href="tel:+551338412424">(13) 3841-2424</a></dd>
+            </div>
+          </div>
+          <div class="dado">
+            <span data-icon="email"></span>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:e089acad@cps.sp.gov.br">e089acad@cps.sp.gov.br</a></dd>
+            </div>
+          </div>
+          <div class="dado">
+            <span data-icon="relogio"></span>
+            <div>
+              <dt>Horário de atendimento</dt>
+              <dd>Segunda a sexta-feira, das 7h às 21h</dd>
+            </div>
+          </div>
+          <div class="grupo-botoes">
+            <a class="botao botao--secundario" href="contato.html">
+              Fale com a secretaria
+              <span data-icon="seta-direita"></span>
+            </a>
+          </div>
+        </dl>
+
+        <div class="mapa" data-mapa
+             data-mapa-fonte="https://www.google.com/maps?q=Etec+Eng+Agr%C3%B4nomo+Narciso+de+Medeiros+Iguape+SP&output=embed">
+          <picture>
+            <source type="image/avif" srcset="assets/img/manguezal-400.avif 400w, assets/img/manguezal-800.avif 800w" sizes="92vw">
+            <source type="image/webp" srcset="assets/img/manguezal-400.webp 400w, assets/img/manguezal-800.webp 800w" sizes="92vw">
+            <img class="mapa__poster" src="assets/img/manguezal-fallback.jpg" alt="Rio e manguezal no Vale do Ribeira — imagem ilustrativa da região." width="800" height="533" loading="lazy" decoding="async">
+          </picture>
+          <div class="mapa__sobreposicao">
+            <p><strong>Ver a escola no mapa</strong><br>O mapa só carrega ao clicar.</p>
+            <div class="grupo-botoes">
+              <button class="botao botao--primario botao--pequeno" type="button" data-mapa-carregar>
+                <span data-icon="mapa"></span> Ver no mapa
+              </button>
+              <a class="botao botao--secundario botao--pequeno" href="https://www.google.com/maps/search/?api=1&amp;query=Etec+Eng+Agr%C3%B4nomo+Narciso+de+Medeiros+Iguape+SP" target="_blank" rel="noopener">
+                Abrir no Google Maps
+                <span data-icon="externo"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALERIA -->
+      <div class="mt-9">
+        <div class="cabecalho-secao">
+          <p class="olho">O território</p>
+          <h2>O Vale do Ribeira que a escola atende</h2>
+          <p>
+            A região vive da banana, da pesca e da agricultura familiar. Estas
+            imagens ilustram esse contexto — nenhuma delas é uma foto da escola
+            ou de suas instalações.
+          </p>
+        </div>
+
+        <div class="galeria" data-galeria>
+          <button class="galeria__item" type="button" data-galeria-item
+                  data-legenda="Bananicultura — principal atividade agrícola da região. Imagem ilustrativa."
+                  data-ampliada="assets/img/bananal-800.webp">
+            <picture>
+              <source type="image/avif" srcset="assets/img/bananal-400.avif 400w, assets/img/bananal-800.avif 800w" sizes="(min-width:760px) 380px, 46vw">
+              <source type="image/webp" srcset="assets/img/bananal-400.webp 400w, assets/img/bananal-800.webp 800w" sizes="(min-width:760px) 380px, 46vw">
+              <img src="assets/img/bananal-fallback.jpg" alt="Fileiras de bananeiras em uma plantação — imagem ilustrativa." width="800" height="533" loading="lazy" decoding="async">
+            </picture>
+            <span class="galeria__legenda">Bananicultura regional</span>
+          </button>
+
+          <button class="galeria__item" type="button" data-galeria-item
+                  data-legenda="Cultura da bananeira — registro histórico do acervo do Museu Paulista."
+                  data-ampliada="assets/img/bananal-historico-1200.webp">
+            <picture>
+              <source type="image/avif" srcset="assets/img/bananal-historico-400.avif 400w, assets/img/bananal-historico-800.avif 800w" sizes="(min-width:760px) 380px, 46vw">
+              <source type="image/webp" srcset="assets/img/bananal-historico-400.webp 400w, assets/img/bananal-historico-800.webp 800w" sizes="(min-width:760px) 380px, 46vw">
+              <img src="assets/img/bananal-historico-fallback.jpg" alt="Registro histórico de plantação de bananeiras." width="800" height="392" loading="lazy" decoding="async">
+            </picture>
+            <span class="galeria__legenda">Registro histórico</span>
+          </button>
+
+          <button class="galeria__item" type="button" data-galeria-item
+                  data-legenda="Manguezais e rios do litoral sul paulista. Imagem ilustrativa."
+                  data-ampliada="assets/img/manguezal-1200.webp">
+            <picture>
+              <source type="image/avif" srcset="assets/img/manguezal-400.avif 400w, assets/img/manguezal-800.avif 800w" sizes="(min-width:760px) 380px, 46vw">
+              <source type="image/webp" srcset="assets/img/manguezal-400.webp 400w, assets/img/manguezal-800.webp 800w" sizes="(min-width:760px) 380px, 46vw">
+              <img src="assets/img/manguezal-fallback.jpg" alt="Rio e manguezal no Vale do Ribeira — imagem ilustrativa." width="800" height="533" loading="lazy" decoding="async">
+            </picture>
+            <span class="galeria__legenda">Manguezais e rios</span>
+          </button>
+
+          <button class="galeria__item" type="button" data-galeria-item
+                  data-legenda="Pesca artesanal — atividade tradicional da região. Imagem ilustrativa."
+                  data-ampliada="assets/img/pesca-barcos-1200.webp">
+            <picture>
+              <source type="image/avif" srcset="assets/img/pesca-barcos-400.avif 400w, assets/img/pesca-barcos-800.avif 800w" sizes="(min-width:760px) 380px, 46vw">
+              <source type="image/webp" srcset="assets/img/pesca-barcos-400.webp 400w, assets/img/pesca-barcos-800.webp 800w" sizes="(min-width:760px) 380px, 46vw">
+              <img src="assets/img/pesca-barcos-fallback.jpg" alt="Barcos de pesca ancorados — imagem ilustrativa." width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <span class="galeria__legenda">Pesca artesanal</span>
+          </button>
+
+          <button class="galeria__item" type="button" data-galeria-item
+                  data-legenda="Redes de pesca secando ao sol. Imagem ilustrativa."
+                  data-ampliada="assets/img/pesca-redes-1200.webp">
+            <picture>
+              <source type="image/avif" srcset="assets/img/pesca-redes-400.avif 400w, assets/img/pesca-redes-800.avif 800w" sizes="(min-width:760px) 380px, 46vw">
+              <source type="image/webp" srcset="assets/img/pesca-redes-400.webp 400w, assets/img/pesca-redes-800.webp 800w" sizes="(min-width:760px) 380px, 46vw">
+              <img src="assets/img/pesca-redes-fallback.jpg" alt="Redes de pesca secando ao sol — imagem ilustrativa." width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <span class="galeria__legenda">Redes de pesca</span>
+          </button>
+
+          <button class="galeria__item" type="button" data-galeria-item
+                  data-legenda="Piscicultura em tanques circulares. Imagem ilustrativa — a escola não oferece curso de Aquicultura."
+                  data-ampliada="assets/img/aquicultura-1200.webp">
+            <picture>
+              <source type="image/avif" srcset="assets/img/aquicultura-400.avif 400w, assets/img/aquicultura-800.avif 800w" sizes="(min-width:760px) 380px, 46vw">
+              <source type="image/webp" srcset="assets/img/aquicultura-400.webp 400w, assets/img/aquicultura-800.webp 800w" sizes="(min-width:760px) 380px, 46vw">
+              <img src="assets/img/aquicultura-fallback.jpg" alt="Tanques circulares de piscicultura — imagem ilustrativa." width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <span class="galeria__legenda">Piscicultura</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="secao secao--compacta" id="cta-final" aria-labelledby="cta-titulo">
+    <div class="container">
+      <div class="cta-final" data-revelar>
+        <h2 id="cta-titulo">Sua formação técnica começa com uma inscrição</h2>
+        <p>
+          As inscrições do Vestibulinho para o 1º semestre de 2027 vão de
+          2 de setembro a 3 de novembro de 2026. A prova é em 6 de dezembro.
+        </p>
+        <div class="grupo-botoes">
+          <a class="botao botao--acento" href="https://vestibulinho.etec.sp.gov.br" target="_blank" rel="noopener">
+            Inscreva-se no site oficial
+            <span data-icon="externo"></span>
+          </a>
+          <a class="botao botao--contorno-claro" href="contato.html">Tirar dúvidas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape__grade">
+      <div>
+        <p class="navbar__marca-nome txt-md">Etec Eng. Agrônomo Narciso de Medeiros</p>
+        <p class="rodape-descricao">
+          Escola técnica pública do Centro Paula Souza, em Iguape, no Vale do
+          Ribeira. Ensino técnico gratuito desde 1970.
+        </p>
+        <p class="txt-sm mt-4">
+          <a href="https://eteciguape.cps.sp.gov.br/" target="_blank" rel="noopener">
+            eteciguape.cps.sp.gov.br
+            <span data-icon="externo"></span>
+          </a>
+        </p>
+      </div>
+
+      <div>
+        <p class="rodape__titulo">Navegar</p>
+        <ul class="rodape__lista">
+          <li><a href="#sobre">A Escola</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#estrutura">Estrutura</a></li>
+          <li><a href="#vestibulinho">Vestibulinho</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="rodape__titulo">Contato</p>
+        <ul class="rodape__lista">
+          <li><a href="tel:+551338415170">(13) 3841-5170</a></li>
+          <li><a href="tel:+551338412424">(13) 3841-2424</a></li>
+          <li><a href="mailto:e089acad@cps.sp.gov.br">e089acad@cps.sp.gov.br</a></li>
+          <li><a href="contato.html">Formulário de contato</a></li>
+          <li><a href="https://vestibulinho.etec.sp.gov.br" target="_blank" rel="noopener">Vestibulinho</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      <p>© <span data-ano>2026</span> Etec Eng. Agrônomo Narciso de Medeiros — Centro Paula Souza.</p>
+      <p class="rodape__nota-imagens">
+        Imagens ilustrativas do Vale do Ribeira e acervo histórico. Este site não
+        utiliza fotografias das instalações da escola.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/icons.js" defer></script>
+<script src="assets/js/nav.js" defer></script>
+<script src="assets/js/reveal.js" defer></script>
+<script src="assets/js/counters.js" defer></script>
+<script src="assets/js/accordion.js" defer></script>
+<script src="assets/js/gallery.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

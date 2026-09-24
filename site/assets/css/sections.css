@@ -1,0 +1,255 @@
+/* sections.css — blocos de página: hero, números, linha do tempo, galeria,
+   lightbox, mapa e chamada final. Carregado depois de components.css. */
+
+/* Hero ------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  min-height: clamp(560px, 78vh, 760px);
+  padding-block: var(--e-10);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero__fundo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #226b3f;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(100deg,
+      rgb(9 42 24 / 0.94) 0%,
+      rgb(12 52 30 / 0.86) 38%,
+      rgb(16 62 36 / 0.55) 66%,
+      rgb(18 70 40 / 0.34) 100%);
+}
+
+.hero__conteudo { display: grid; gap: var(--e-6); max-width: 760px; }
+
+.hero__selo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-3);
+  align-self: start;
+  padding: var(--e-2) var(--e-4);
+  border: 1px solid rgb(255 255 255 / 0.3);
+  border-radius: var(--r-pill);
+  background-color: rgb(255 255 255 / 0.1);
+  font-size: var(--txt-xs);
+  font-weight: var(--peso-medio);
+}
+
+.hero h1 { color: #fff; }
+.hero h1 em { font-style: italic; color: #f3d99a; }
+
+.hero__resumo {
+  font-size: var(--txt-md);
+  color: rgb(255 255 255 / 0.9);
+  max-width: 58ch;
+}
+
+.hero__rodape {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3) var(--e-6);
+  padding-top: var(--e-2);
+  font-size: var(--txt-sm);
+  color: rgb(255 255 255 / 0.85);
+}
+
+.hero__rodape span { display: inline-flex; align-items: center; gap: var(--e-2); }
+.hero__rodape svg { width: 18px; height: 18px; }
+
+/* Números (contadores) --------------------------------------------------- */
+.numero { text-align: center; display: grid; gap: var(--e-2); }
+
+.numero__valor {
+  font-family: var(--fonte-display);
+  font-size: var(--txt-2xl);
+  font-weight: var(--peso-forte);
+  line-height: 1;
+  color: var(--cor-primaria);
+  font-variant-numeric: tabular-nums;
+}
+
+.numero__rotulo {
+  font-size: var(--txt-sm);
+  color: var(--texto-suave);
+  max-width: 24ch;
+  margin-inline: auto;
+}
+
+/* Linha do tempo --------------------------------------------------------- */
+.linha-tempo { list-style: none; padding: 0; display: grid; gap: 0; }
+
+.linha-tempo__item {
+  position: relative;
+  padding: 0 0 var(--e-6) var(--e-7);
+  border-left: 2px solid var(--borda);
+}
+
+.linha-tempo__item:last-child { padding-bottom: 0; border-left-color: transparent; }
+
+.linha-tempo__item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--cor-acento);
+  border: 3px solid var(--bg);
+}
+
+.linha-tempo__ano {
+  font-family: var(--fonte-display);
+  font-weight: var(--peso-forte);
+  font-size: var(--txt-md);
+  color: var(--cor-terracota);
+  display: block;
+}
+
+/* Galeria ---------------------------------------------------------------- */
+.galeria {
+  display: grid;
+  gap: var(--e-3);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 760px) {
+  .galeria { grid-template-columns: repeat(3, 1fr); }
+}
+
+.galeria__item {
+  position: relative;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background-color: var(--cor-primaria-clara);
+  aspect-ratio: 4 / 3;
+}
+
+.galeria__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-lenta) var(--curva);
+}
+
+.galeria__item:hover img { transform: scale(1.05); }
+
+.galeria__legenda {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: var(--e-5) var(--e-4) var(--e-3);
+  background: linear-gradient(to top, rgb(0 0 0 / 0.78), transparent);
+  color: #fff;
+  font-size: var(--txt-xs);
+  text-align: left;
+}
+
+/* Lightbox --------------------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-aviso);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: rgb(8 12 10 / 0.95);
+  color: #fff;
+  padding: var(--e-4);
+}
+
+.lightbox[hidden] { display: none; }
+.lightbox__topo { display: flex; justify-content: flex-end; }
+
+.lightbox__fechar {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgb(255 255 255 / 0.3);
+  border-radius: 50%;
+  background: none;
+  color: #fff;
+}
+
+.lightbox__fechar svg { width: 22px; height: 22px; }
+
+.lightbox__figura { display: grid; place-items: center; gap: var(--e-4); }
+.lightbox__figura img { max-height: 74vh; width: auto; border-radius: var(--r-md); }
+
+.lightbox__figura figcaption {
+  font-size: var(--txt-sm);
+  color: rgb(255 255 255 / 0.8);
+  max-width: 70ch;
+  text-align: center;
+}
+
+.lightbox__nav { display: flex; justify-content: center; gap: var(--e-3); }
+
+/* Mapa ------------------------------------------------------------------- */
+.mapa {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--borda);
+  min-height: 320px;
+  background-color: var(--cor-primaria-clara);
+  display: grid;
+  place-items: center;
+}
+
+.mapa__poster { width: 100%; height: 100%; object-fit: cover; }
+.mapa iframe { width: 100%; height: 100%; min-height: 380px; border: 0; }
+
+.mapa__sobreposicao {
+  position: absolute;
+  inset: auto var(--e-4) var(--e-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--e-4);
+  background-color: color-mix(in srgb, var(--bg-elevada) 94%, transparent);
+  border-radius: var(--r-md);
+  box-shadow: var(--sombra-md);
+}
+
+.mapa__sobreposicao p { font-size: var(--txt-sm); margin: 0; }
+
+/* Chamada final ---------------------------------------------------------- */
+.cta-final {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--r-lg);
+  padding: var(--e-9) var(--e-6);
+  background: linear-gradient(135deg, #1b5432, #226b3f 55%, #2c7a4b);
+  color: #fff;
+  text-align: center;
+}
+
+.cta-final h2 { color: #fff; }
+
+.cta-final p {
+  color: rgb(255 255 255 / 0.9);
+  margin: var(--e-4) auto var(--e-7);
+  max-width: 56ch;
+}
+
+.cta-final .grupo-botoes { justify-content: center; }

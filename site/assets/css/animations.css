@@ -1,0 +1,93 @@
+/* animations.css — revelação ao rolar. Só anima se o JS estiver ativo e o
+   usuário não pedir movimento reduzido (o corte global está em base.css). */
+
+html:not(.js) [data-revelar] { opacity: 1; transform: none; }
+
+[data-revelar] {
+  opacity: 1;
+  transform: none;
+}
+
+html.js [data-revelar] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--dur-lenta) var(--curva),
+    transform var(--dur-lenta) var(--curva);
+}
+
+html.js [data-revelar][data-visivel="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-revelar] { opacity: 1; transform: none; transition: none; }
+}
+
+/* Atraso escalonado para grades de cartões. */
+html.js [data-revelar][data-atraso="1"] { transition-delay: 80ms; }
+html.js [data-revelar][data-atraso="2"] { transition-delay: 160ms; }
+html.js [data-revelar][data-atraso="3"] { transition-delay: 240ms; }
+html.js [data-revelar][data-atraso="4"] { transition-delay: 320ms; }
+html.js [data-revelar][data-atraso="5"] { transition-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-revelar][data-atraso] { transition-delay: 0ms; }
+}
+
+/* Entrada do hero */
+html.js .hero__conteudo > * {
+  animation: subir var(--dur-lenta) var(--curva) backwards;
+}
+
+html.js .hero__selo { animation-delay: 60ms; }
+html.js .hero h1 { animation-delay: 140ms; }
+html.js .hero__resumo { animation-delay: 220ms; }
+html.js .hero .grupo-botoes { animation-delay: 300ms; }
+html.js .hero__rodape { animation-delay: 360ms; }
+
+@keyframes subir {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .hero__conteudo > * { animation: none; }
+}
+
+/* Realce do acordeão */
+.acordeao__painel { animation: abrir var(--dur-media) var(--curva); }
+
+@keyframes abrir {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Indicador de rolagem do hero */
+.hero__rolar {
+  position: absolute;
+  left: 50%;
+  bottom: var(--e-5);
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgb(255 255 255 / 0.35);
+  color: #fff;
+  background: none;
+  animation: flutuar 2.4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__rolar { animation: none; }
+}
+
+@media (max-height: 640px) {
+  .hero__rolar { display: none; }
+}

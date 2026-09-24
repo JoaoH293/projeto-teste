@@ -1,0 +1,283 @@
+/* components.css — peças reutilizáveis: botões, etiquetas, cartões, acordeão,
+   formulário e avisos. Os blocos de página ficam em sections.css. */
+
+/* Botões ----------------------------------------------------------------- */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--e-2);
+  min-height: 48px;
+  padding: 0 var(--e-6);
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  font-family: var(--fonte-texto);
+  font-size: var(--txt-sm);
+  font-weight: var(--peso-semi);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--dur-rapida) var(--curva),
+    border-color var(--dur-rapida) var(--curva),
+    transform var(--dur-rapida) var(--curva);
+}
+
+.botao svg { width: 18px; height: 18px; flex: none; }
+.botao:active { transform: translateY(1px); }
+
+.botao--primario { background-color: var(--cor-primaria); color: #fff; }
+.botao--primario:hover { background-color: var(--cor-primaria-hover); color: #fff; }
+
+.botao--secundario {
+  background-color: transparent;
+  border-color: var(--borda-forte);
+  color: var(--texto);
+}
+.botao--secundario:hover { border-color: var(--cor-primaria); color: var(--cor-primaria); }
+
+.botao--acento { background-color: var(--cor-acento); color: var(--cor-acento-texto); }
+.botao--acento:hover { background-color: #e8a52c; color: var(--cor-acento-texto); }
+
+
+.botao--contorno-claro {
+  background-color: transparent;
+  border-color: rgb(255 255 255 / 0.55);
+  color: #fff;
+}
+.botao--contorno-claro:hover { background-color: rgb(255 255 255 / 0.12); color: #fff; }
+
+.botao--largo { width: 100%; }
+.botao--pequeno { min-height: 44px; padding: 0 var(--e-4); font-size: var(--txt-xs); }
+
+.grupo-botoes { display: flex; flex-wrap: wrap; gap: var(--e-3); }
+
+/* Etiquetas -------------------------------------------------------------- */
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  padding: var(--e-1) var(--e-3);
+  border-radius: var(--r-pill);
+  background-color: var(--cor-primaria-clara);
+  color: var(--cor-primaria-hover);
+  font-size: var(--txt-xs);
+  font-weight: var(--peso-semi);
+  line-height: 1.6;
+}
+
+:root[data-tema="escuro"] .etiqueta { color: var(--texto); }
+
+.etiqueta--neutra {
+  background-color: var(--bg);
+  color: var(--texto-suave);
+  border: 1px solid var(--borda);
+}
+
+/* Cartões ---------------------------------------------------------------- */
+.cartao {
+  display: grid;
+  gap: var(--e-4);
+  align-content: start;
+  padding: var(--e-6);
+  background-color: var(--bg-elevada);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sombra-sm);
+  transition: transform var(--dur-media) var(--curva),
+    box-shadow var(--dur-media) var(--curva),
+    border-color var(--dur-media) var(--curva);
+}
+
+.cartao--interativo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-lg);
+  border-color: var(--borda-forte);
+}
+
+.cartao__icone {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-md);
+  background-color: var(--cor-primaria-clara);
+  color: var(--cor-primaria);
+}
+
+.cartao__icone svg { width: 28px; height: 28px; }
+
+.cartao h3 { font-size: var(--txt-md); }
+.cartao p { color: var(--texto-suave); font-size: var(--txt-sm); }
+
+.cartao__lista {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--e-2);
+  font-size: var(--txt-sm);
+  color: var(--texto-suave);
+}
+
+.cartao__lista li { display: flex; gap: var(--e-3); align-items: flex-start; }
+
+.cartao__lista svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin-top: 0.35em;
+  color: var(--cor-primaria);
+}
+
+.cartao__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+  padding-top: var(--e-2);
+  border-top: 1px solid var(--borda);
+}
+
+.cartao--destaque {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 1px var(--cor-primaria), var(--sombra-md);
+}
+
+/* Cartão de curso */
+.curso__topo { display: flex; align-items: flex-start; gap: var(--e-4); }
+.curso__topo .cartao__icone { flex: none; }
+
+/* Acordeão --------------------------------------------------------------- */
+.acordeao { display: grid; gap: var(--e-3); }
+
+.acordeao__item {
+  background-color: var(--bg-elevada);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.acordeao__gatilho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e-4);
+  width: 100%;
+  min-height: 60px;
+  padding: var(--e-4) var(--e-5);
+  background: none;
+  border: 0;
+  text-align: left;
+  font-family: var(--fonte-display);
+  font-size: var(--txt-md);
+  font-weight: var(--peso-medio);
+}
+
+.acordeao__gatilho svg {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: var(--cor-primaria);
+  transition: transform var(--dur-media) var(--curva);
+}
+
+.acordeao__gatilho[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+.acordeao__painel {
+  padding: 0 var(--e-5) var(--e-5);
+  color: var(--texto-suave);
+  font-size: var(--txt-sm);
+}
+
+.acordeao__painel[hidden] { display: none; }
+.acordeao__painel > * + * { margin-top: var(--e-3); }
+
+/* Aviso ------------------------------------------------------------------ */
+.aviso {
+  display: flex;
+  gap: var(--e-4);
+  padding: var(--e-5);
+  border-radius: var(--r-md);
+  border: 1px solid var(--borda);
+  background-color: var(--bg-elevada);
+  font-size: var(--txt-sm);
+}
+
+.aviso svg { width: 22px; height: 22px; flex: none; color: var(--cor-acento); }
+.aviso p + p { margin-top: var(--e-2); }
+
+.aviso--atencao {
+  border-color: var(--cor-acento);
+  background-color: #fdf6e7;
+  color: #503611;
+}
+
+:root[data-tema="escuro"] .aviso--atencao {
+  background-color: #2a2214;
+  color: var(--texto);
+}
+
+/* Dados (lista de definição com ícone) ----------------------------------- */
+.dado { display: flex; gap: var(--e-4); align-items: flex-start; }
+.dado svg { width: 22px; height: 22px; flex: none; color: var(--cor-primaria); margin-top: 0.15em; }
+
+.dado dt {
+  font-size: var(--txt-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--texto-suave);
+  font-weight: var(--peso-forte);
+}
+
+.dado dd { margin: var(--e-1) 0 0; font-size: var(--txt-sm); }
+
+/* Formulário ------------------------------------------------------------- */
+.formulario { display: grid; gap: var(--e-5); }
+
+.campo { display: grid; gap: var(--e-2); }
+
+.campo label { font-size: var(--txt-sm); font-weight: var(--peso-semi); }
+
+.campo .ajuda { font-size: var(--txt-xs); color: var(--texto-suave); }
+.campo .erro { font-size: var(--txt-xs); color: #a3311a; font-weight: var(--peso-semi); }
+
+:root[data-tema="escuro"] .campo .erro { color: #ff9b84; }
+
+.campo input, .campo select, .campo textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--e-3) var(--e-4);
+  background-color: var(--bg-elevada);
+  border: 1px solid var(--borda-forte);
+  border-radius: var(--r-sm);
+  font-size: var(--txt-base);
+}
+
+.campo textarea { min-height: 140px; resize: vertical; }
+
+.campo input:focus-visible,
+.campo select:focus-visible,
+.campo textarea:focus-visible { border-color: var(--cor-primaria); }
+
+.campo[data-invalido="true"] input,
+.campo[data-invalido="true"] select,
+.campo[data-invalido="true"] textarea { border-color: #a3311a; }
+
+.campo--caixa { display: flex; gap: var(--e-3); align-items: flex-start; }
+.campo--caixa input { width: 22px; height: 22px; min-height: 0; margin-top: 0.15em; flex: none; }
+.campo--caixa label { font-weight: var(--peso-normal); }
+
+.retorno {
+  padding: var(--e-4) var(--e-5);
+  border-radius: var(--r-md);
+  font-size: var(--txt-sm);
+  border: 1px solid;
+}
+
+.retorno--ok {
+  background-color: var(--cor-primaria-clara);
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria-hover);
+}
+
+.retorno--erro { background-color: #fdecea; border-color: #a3311a; color: #7c2510; }
+
+:root[data-tema="escuro"] .retorno--ok { color: var(--texto); }

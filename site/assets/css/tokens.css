@@ -1,0 +1,134 @@
+/* tokens.css — variáveis de design. Carregado primeiro, sem dependências. */
+:root {
+  /* Cor — marca */
+  --cor-primaria: #226b3f;
+  --cor-primaria-hover: #1b5432;
+  --cor-primaria-clara: #e8f0eb;
+  --cor-acento: #d4921a;
+  --cor-acento-texto: #18201c;
+  --cor-terracota: #7c3a27;
+
+  /* Cor — superfícies e texto (tema claro) */
+  --bg: #f7f9f7;
+  --bg-alt: #ffffff;
+  --bg-elevada: #ffffff;
+  --texto: #18201c;
+  --texto-suave: #55635b;
+  --borda: #d8e0da;
+  --borda-forte: #b6c2b9;
+  --sombra-cor: 24 32 28;
+
+  --foco: var(--cor-primaria-hover);
+  --foco-contraste: #ffffff;
+
+  /* Tipografia */
+  --fonte-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --fonte-texto: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --txt-xs: clamp(0.75rem, 0.72rem + 0.14vw, 0.8125rem);
+  --txt-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+  --txt-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --txt-md: clamp(1.125rem, 1.06rem + 0.3vw, 1.25rem);
+  --txt-lg: clamp(1.375rem, 1.25rem + 0.6vw, 1.625rem);
+  --txt-xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.5rem);
+  --txt-2xl: clamp(2.125rem, 1.7rem + 2.1vw, 3.5rem);
+  --txt-3xl: clamp(2.5rem, 1.85rem + 3.2vw, 4.5rem);
+
+  --peso-normal: 400;
+  --peso-medio: 500;
+  --peso-semi: 600;
+  --peso-forte: 700;
+
+  --altura-linha-apertada: 1.12;
+  --altura-linha-titulo: 1.2;
+  --altura-linha-texto: 1.65;
+  --espaco-letra-titulo: -0.015em;
+
+  /* Espaço — escala 1.250 a partir de 1rem */
+  --e-1: 0.25rem;
+  --e-2: 0.5rem;
+  --e-3: 0.75rem;
+  --e-4: 1rem;
+  --e-5: 1.25rem;
+  --e-6: 1.5rem;
+  --e-7: 1.953rem;
+  --e-8: 2.441rem;
+  --e-9: 3.052rem;
+  --e-10: 3.815rem;
+  --e-11: 4.768rem;
+
+  /* Layout */
+  --largura-container: 1200px;
+  --gutter: 20px;
+  --quebra-nav: 1024px;
+
+  /* Raio */
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+
+  /* Movimento */
+  --dur-rapida: 150ms;
+  --dur-media: 260ms;
+  --dur-lenta: 520ms;
+  --curva: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* Camadas */
+  --z-base: 1;
+  --z-conteudo: 10;
+  --z-nav: 100;
+  --z-aviso: 200;
+
+  /* Sombra */
+  --sombra-sm: 0 1px 2px rgb(var(--sombra-cor) / 0.06),
+    0 1px 3px rgb(var(--sombra-cor) / 0.08);
+  --sombra-md: 0 4px 6px -1px rgb(var(--sombra-cor) / 0.08),
+    0 10px 24px -6px rgb(var(--sombra-cor) / 0.12);
+  --sombra-lg: 0 12px 32px -8px rgb(var(--sombra-cor) / 0.18),
+    0 2px 8px -2px rgb(var(--sombra-cor) / 0.1);
+
+  color-scheme: light;
+}
+
+@media (min-width: 700px) {
+  :root { --gutter: 32px; }
+}
+
+@media (min-width: 1100px) {
+  :root { --gutter: 40px; }
+}
+
+/* Tema escuro — preferência do sistema, sobreponível por [data-tema]. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    --bg: #0d1310;
+    --bg-alt: #18201c;
+    --bg-elevada: #18201c;
+    --texto: #f7f9f7;
+    --texto-suave: #c9d3cc;
+    --borda: #2c3833;
+    --borda-forte: #43534b;
+    --cor-primaria-clara: #1e2c25;
+    --sombra-cor: 0 0 0;
+    --foco: #ecc25c;
+    --foco-contraste: #0d1310;
+    color-scheme: dark;
+  }
+}
+
+:root[data-tema="escuro"] {
+  --bg: #0d1310;
+  --bg-alt: #18201c;
+  --bg-elevada: #18201c;
+  --texto: #f7f9f7;
+  --texto-suave: #c9d3cc;
+  --borda: #2c3833;
+  --borda-forte: #43534b;
+  --cor-primaria-clara: #1e2c25;
+  --sombra-cor: 0 0 0;
+  --foco: #ecc25c;
+  --foco-contraste: #0d1310;
+  color-scheme: dark;
+}
